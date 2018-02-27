@@ -1,0 +1,4 @@
+body { margin: 0; background: #222; color: #fafafa; font-family: 'Montserrat', sans-serif; }
+.wrapper { display: flex; justify-content: center; align-items: center; height: 100vh; }
+
+h1 { margin: 0; font-weight: normal; font-family: 'Bodoni 72', sans-serif; font-size: 70px; }
