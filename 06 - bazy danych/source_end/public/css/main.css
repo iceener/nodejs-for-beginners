@@ -1,0 +1,44 @@
+body { margin: 0; background: #222; color: #fafafa; font-family: 'Montserrat', sans-serif; }
+.wrapper { display: flex; align-items: center; height: 100vh; padding: 0 75px;  }
+.home { background: url('../img/home/bg.jpg'); background-size: cover; }
+
+/* logo */
+.logo { border: 1px solid rgba(255,255,255,.17); position: absolute; left: 75px; top: 25px; padding: 10px; width: 160px; }
+.logo__icon { width: 20px; float: left; margin-right: 5px; padding-right: 5px; }
+.logo__text { display: block; opacity: .43; text-transform: uppercase; font-size: 12px; margin-top: 2px; }
+
+/* navigation */
+.app-nav { float: right; }
+.app-nav__list { list-style: none; display: flex; }
+.app-nav__list-item { font-size: 10px; text-transform: uppercase; padding: 0 25px; }
+
+.app-nav__link { color: #fafafa; opacity: .43; text-decoration: none; display: block; padding: 5px 5px; }
+.app-nav__link:focus { transition: .2s all ease-in-out; transform: scale(1.1); outline: none; box-shadow: none; }
+.app-nav__link--is-active, .app-nav__link:hover { border-bottom: 1px solid #fff; }
+
+/* slogan */
+.slogan { max-width: 65%; }
+.slogan__header { margin: 0 0 20px; font-weight: normal; font-family: 'Bodoni 72', sans-serif; font-size: 52px; }
+.slogan__text { font-size: 16px; color: #d0c4bc; font-weight: 100; line-height: 24px; max-width: 500px; }
+
+.actions { margin-top: 50px; }
+.btn { transition: .2s all ease-in-out; text-transform: uppercase; border-radius: 35px; line-height: 50px; border: none; padding: 0 30px; background: none; cursor: pointer; }
+.btn:focus { transform: scale(1.1); outline: none; box-shadow: none; }
+.btn--shadow { border: 1px solid #d0c4bc; color: #d0c4bc; }
+.btn--primary { color: #fff; background: #c19656; margin-right: 20px; }
+
+.app-footer { position: absolute; bottom: 15px; right: 15px; opacity: .5; }
+
+/* lightbox */
+.lightbox { position: fixed; top: 0; left: 0; right: 0; bottom: 0; display: flex; justify-content: center; align-items: center; }
+.lightbox:before { content: ''; display: block; position: absolute; left: 0; right: 0; top: 0; bottom: 0; background: rgba(0,0,0,.7); }
+.lightbox__content { min-width: 520px; position: relative; background: #fff; color: #222; padding: 15px; border-radius: 2px; }
+.lightbox__header { text-align: center; font-family: 'Bodoni 72', serif; font-weight: 100; letter-spacing: 4px; text-transform: uppercase; font-size: 36px; }
+
+/* lightbox form */
+.lightbox__form-control { width: 100%; margin-bottom: 35px; }
+.lightbox__label { text-transform: uppercase; width: 100%; margin-bottom: 15px; display: block; }
+.lightbox__input { transition: .2s all ease-in-out; width: 100%; border: none; border-bottom: 1px solid #ddd; padding-bottom: 5px; font-size: 16px; font-weight: 500; text-transform: uppercase; font-family: 'Montserrat', sans-serif; }
+.lightbox__input:focus { outline: none; box-shadow: none; }
+.lightbox__actions { text-align: right; }
+.lightbox__actions--centered { text-align: center; }
