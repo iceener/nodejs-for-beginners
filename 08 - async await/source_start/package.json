@@ -1,0 +1,23 @@
+{
+  "name": "overment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "bookshelf": "^0.12.1",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.2",
+    "express-session": "^1.15.6",
+    "global": "^4.3.2",
+    "knex": "^0.14.4",
+    "mysql2": "^1.5.2",
+    "pug": "^2.0.0-rc.4"
+  }
+}
