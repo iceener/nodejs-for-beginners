@@ -1,0 +1,60 @@
+html
+    head
+        link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700")
+        link(rel="stylesheet" href="/css/main.css")
+    body
+        div.home.dog-app(data-lightbox=showLightbox)
+            header.app-header
+                .logo
+                    img.logo__icon(src="/img/home-icon.png")
+                    span.logo__text shelter for dogs
+                nav.app-nav
+                    ul.app-nav__list
+                        li.app-nav__list-item
+                            a.app-nav__link.app-nav__link--is-active(href="#") home
+                        li.app-nav__list-item
+                            a.app-nav__link(href="#") adopt a dog
+                        li.app-nav__list-item
+                            a.app-nav__link(href="#")  contact
+            .wrapper
+                section.slogan
+                    h1.slogan__header
+                        | Be a hero. Adopt a dog.
+                    p.slogan__text
+                        | Do you know how many dogs are homeless? All of them need care and attention, and all of them want to live in a happy and warm home. You could save their life. Be a hero.
+                    .actions
+                        button.btn.btn--primary(@click="formLightbox = true") Adopt a dog
+                        button.btn.btn--shadow Donate us
+                footer.app-footer
+                    | Design by Joanna Ostafin @ProjectPeople.pl
+            .lightbox(v-show="formLightbox == true" style="display: none;")
+                .lightbox__content
+                    h2.lightbox__header Adopt a dog, hero
+                    form.lightbox__form(action="/applications" method="POST")
+                        .lightbox__form-control
+                            label.lightbox__label What's your name?
+                            input.lightbox__input(placeholder="John Doe" type="text" name="name" value=validated ? validated.name: '')
+                            if(errors && errors.name)
+                                p.lightbox__error #{ errors.name.msg }
+                        .lightbox__form-control
+                            label.lightbox__label What's your email?
+                            input.lightbox__input(placeholder="john@example.com" type="email" name="email" value=validated ? validated.email : '')
+                            if(errors && errors.email)
+                                p.lightbox__error #{ errors.email.msg }
+                        .lightbox__form-control
+                            label.lightbox__label Leave a message
+                            textarea.lightbox__input(placeholder="Please feel free to ask us anything" rows="3" name="message" value=validated ? validated.message : '')
+                            if(errors && errors.message)
+                                p.lightbox__error #{ errors.message.msg }
+                        .lightbox__actions
+                            button.btn.btn--primary Adopt a dog
+
+            if (formMessage && formMessage.length)
+                .lightbox(v-show="showFeedback")
+                    .lightbox__content
+                        h2.lightbox__header #{ formMessage }
+                        .lightbox__actions.lightbox__actions--centered
+                            button.btn.btn--primary(@click="closeFeedbackLightbox") Close
+
+        script(src="https://cdn.jsdelivr.net/npm/vue" type="text/javascript")
+        script(src="/js/app.js")
